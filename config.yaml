@@ -1,16 +1,16 @@
 # PBS configuration
 
-# If submitting to a different project to your default, uncomment line below 
+# If submitting to a different project to your default, uncomment line below
 # and change project code as appropriate; also set shortpath below
-# project: v45
+project: v45
 
 # Force payu to always find, and save, files in this scratch project directory
 # (you may need to add the corresponding PBS -l storage flag in sync_data.sh)
-# shortpath: /scratch/v45
+shortpath: /scratch/e14
 
 queue: normal
-walltime: 5:00:00
-jobname: 025deg_era5_ryf
+walltime: 05:00:00
+jobname: 025deg_era5_iaf
 
 # Model configuration
 name: common
@@ -19,29 +19,41 @@ input: /g/data/e14/rmh561/access-om2/input/ERA-5/remap/prod
 submodels:
     - name: atmosphere
       model: yatm
-      exe: /g/data/ik11/inputs/access-om2/bin/yatm_70e2c46.exe
+      exe: /g/data/e14/rmh561/access-om2/bin/yatm_bfa2062.exe
       input:
             - /g/data/ik11/inputs/access-om2/input_20201102/yatm_025deg
-            - /g/data/e14/rmh561/access-om2/input/ERA-5/RYF/chunked
+            - /g/data/rt52/era5/single-levels/reanalysis/msdwswrf
+            - /g/data/rt52/era5/single-levels/reanalysis/msdwlwrf
+            - /g/data/rt52/era5/single-levels/reanalysis/crr
+            - /g/data/rt52/era5/single-levels/reanalysis/lsrr
+            - /g/data/rt52/era5/single-levels/reanalysis/msr
+            - /g/data/rt52/era5/single-levels/reanalysis/msl
+            - /g/data/rt52/era5/single-levels/reanalysis/2t
+            - /g/data/rt52/era5/single-levels/reanalysis/2d
+            - /g/data/rt52/era5/single-levels/reanalysis/sp
+            - /g/data/rt52/era5/single-levels/reanalysis/10u
+            - /g/data/rt52/era5/single-levels/reanalysis/10v
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0-1/land/day/friver/gr/v20190429
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0-1/landIce/day/licalvf/gr/v20190429
       ncpus: 1
 
     - name: ocean
       model: mom
-      exe: /g/data/ik11/inputs/access-om2/bin/fms_ACCESS-OM-BGC_9b8ec93_libaccessom2_70e2c46.x
+      exe: /g/data/e14/rmh561/access-om2/bin/fms_ACCESS-OM_9b8ec93_libaccessom2_bfa2062.x
       input: /g/data/ik11/inputs/access-om2/input_20201102/mom_025deg
-      ncpus: 1455
+      ncpus: 216
 
     - name: ice
       model: cice5
-      exe: /g/data/e14/rmh561/access-om2/bin/cice_auscom_1440x1080_480p_1a98130_libaccessom2_70e2c46.exe
+      exe: /g/data/e14/rmh561/access-om2/bin/cice_auscom_1440x1080_480p_1a98130_libaccessom2_bfa2062.exe
       input: /g/data/ik11/inputs/access-om2/input_20201102/cice_025deg
-      ncpus: 361
+      ncpus: 24
 
 # Collation
 collate:
   restart: true
-  mpi: true
   walltime: 1:00:00
+  mpi: true
   mem: 16GB
   ncpus: 4
   queue: normal
