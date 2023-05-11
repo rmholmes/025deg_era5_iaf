@@ -7,7 +7,7 @@
     ! e.g. one of 100, 120, 144, 150, 180, 200, 225, 240, 300, 360, 400, 450, 600, 720, 900,
     ! 1200, 1800, or 3600 seconds.
     ! The model is usually stable with a 1200s timestep, including in the initial spinup from rest.
-    ice_ocean_timestep = 300
+    ice_ocean_timestep = 100
 &end
 
 &date_manager_nml
@@ -16,5 +16,5 @@
 
     ! Runtime for a single segment/job/submit, format is years, months, seconds,
     ! two of which must be zero.
-    restart_period = 0, 0, 864000
+    restart_period = 0, 1, 0
 &end
