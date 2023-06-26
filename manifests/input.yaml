@@ -11,6 +11,11 @@ work/INPUT/ERA5_MOM1_patch.nc:
   hashes:
     binhash: 57aa08f3996d5590f21805b04008c79e
     md5: 5ffdf77bb57e10e3ede874752e4f6c6d
+work/atmosphere/INPUT/10v_era5_oper_sfc_1984_scaling.nc:
+  fullpath: /g/data/e14/rmh561/access-om2/input/ERA-5/IAF/scaling/10v_era5_oper_sfc_1984_scaling.nc
+  hashes:
+    binhash: a7f65580df084376f0f27488547f31a5
+    md5: 11835cefbdca4958afee2e13e60d2c76
 work/atmosphere/INPUT/1959/10u_era5_oper_sfc_19590101-19590131.nc:
   fullpath: /g/data/rt52/era5/single-levels/reanalysis/10u/1959/10u_era5_oper_sfc_19590101-19590131.nc
   hashes:
@@ -43031,11 +43036,6 @@ work/ocean/INPUT/ocean_mosaic.nc:
   hashes:
     binhash: d6a322921d55b3f2c513b41140419110
     md5: 36e956159508785d9201cc13aec0cf02
-work/ocean/INPUT/ocean_temp_salt.res.nc:
-  fullpath: /g/data/ik11/inputs/access-om2/input_20201102/mom_025deg/ocean_temp_salt.res.nc
-  hashes:
-    binhash: aad91ea4d65dd96c5bff35831dec88e1
-    md5: 1797b25e6339595a320076080145fd5a
 work/ocean/INPUT/ocean_vgrid.nc:
   fullpath: /g/data/ik11/inputs/access-om2/input_20201102/mom_025deg/ocean_vgrid.nc
   hashes:
