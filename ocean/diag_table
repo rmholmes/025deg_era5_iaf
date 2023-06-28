@@ -274,17 +274,17 @@ ACCESS-OM2-025
 
 # time step 2d fields
 
-"ocean-2d-tau_x-1-hourly-mean-ym%4yr%2mo", 1, "hours", 1, "days", "time", 1, "years"
-"ocean_model", "tau_x", "tau_x", "ocean-2d-tau_x-1-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ocean-2d-tau_x-0-daily-mean-ym%4yr%2mo", 0, "days", 1, "days", "time", 1, "years"
+"ocean_model", "tau_x", "tau_x", "ocean-2d-tau_x-0-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
-"ocean-2d-tau_y-1-hourly-mean-ym%4yr%2mo", 1, "hours", 1, "days", "time", 1, "years"
-"ocean_model", "tau_y", "tau_y", "ocean-2d-tau_y-1-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ocean-2d-tau_y-0-daily-mean-ym%4yr%2mo", 0, "days", 1, "days", "time", 1, "years"
+"ocean_model", "tau_y", "tau_y", "ocean-2d-tau_y-0-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
-"ocean-2d-usurf-1-hourly-mean-ym%4yr%2mo", 1, "hours", 1, "days", "time", 1, "years"
-"ocean_model", "usurf", "usurf", "ocean-2d-usurf-1-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ocean-2d-usurf-0-daily-mean-ym%4yr%2mo", 0, "days", 1, "days", "time", 1, "years"
+"ocean_model", "usurf", "usurf", "ocean-2d-usurf-0-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
-"ocean-2d-vsurf-1-hourly-mean-ym%4yr%2mo", 1, "hours", 1, "days", "time", 1, "years"
-"ocean_model", "vsurf", "vsurf", "ocean-2d-vsurf-1-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ocean-2d-vsurf-0-daily-mean-ym%4yr%2mo", 0, "days", 1, "days", "time", 1, "years"
+"ocean_model", "vsurf", "vsurf", "ocean-2d-vsurf-0-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 
 # daily 2d maximum fields
