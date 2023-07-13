@@ -111,7 +111,7 @@
                     {
                         "type": "scaling",
                         "dimension": "spatiotemporal",
-                        "value": "INPUT/10u_era5_oper_sfc_*_scaling.nc",
+                        "value": "INPUT/10u_era5_oper_sfc_1986_scaling.nc",
                         "calendar": "forcing",
                         "comment": ""
                     }
@@ -131,7 +131,7 @@
                     {
                         "type": "scaling",
                         "dimension": "spatiotemporal",
-                        "value": "INPUT/10v_era5_oper_sfc_*_scaling.nc",
+                        "value": ["INPUT/10v_era5_oper_sfc_1984_scaling.nc","INPUT/10v_era5_oper_sfc_1986_scaling.nc"],
                         "calendar": "forcing",
                         "comment": ""
                     }
