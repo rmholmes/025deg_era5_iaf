@@ -34,8 +34,10 @@ submodels:
             - /g/data/rt52/era5/single-levels/reanalysis/10u
             - /g/data/rt52/era5/single-levels/reanalysis/10v
             - /g/data/e14/rmh561/access-om2/input/ERA-5/IAF/scaling
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/land/day/friver/gr/v20200916
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/landIce/day/licalvf/gr/v20200916
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/land/day/friver/gr/v20210315
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/land/day/friver/gr/latest
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/landIce/day/licalvf/gr/v20210315
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/landIce/day/licalvf/gr/latest
       ncpus: 1
 
     - name: ocean
