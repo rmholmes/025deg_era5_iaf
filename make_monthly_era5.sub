@@ -1,0 +1,37 @@
+#!/bin/bash
+#PBS -N ERA5
+#PBS -P au06
+#PBS -l ncpus=1
+#PBS -l mem=2GB
+#PBS -l walltime=00:10:00
+#PBS -l wd
+#PBS -l storage=gdata/e14+gdata/rt52
+#PBS -q normal
+
+module load nco
+
+# This is intended to be submitted with a command such as:
+# qsub -v var=10u make_monthly_era5.sub
+
+base_in=/g/data/rt52/era5t/single-levels/reanalysis
+base_out=/g/data/e14/rmh561/access-om2/input/ERA-5/IAF
+
+mkdir -p $base_out/$var
+mkdir -p $base_out/$var/2023/
+mkdir -p $base_out/$var/2023/tmp/
+
+for f in $base_in/$var/2023/${var}_era5t_oper_sfc_2023*.nc; do
+    echo $f
+    ncks -O --mk_rec_dmn time $f $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_${f: -20}
+done
+ncrcat -O $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_202304*.nc $base_out/$var/2023/${var}_era5t_oper_sfc_20230401-20230430.nc
+ncrcat -O $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_202305*.nc $base_out/$var/2023/${var}_era5t_oper_sfc_20230501-20230531.nc
+ncrcat -O $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_202306*.nc $base_out/$var/2023/${var}_era5t_oper_sfc_20230601-20230630.nc
+ncrcat -O $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_202307*.nc $base_out/$var/2023/${var}_era5t_oper_sfc_20230701-20230731.nc
+
+# To deal with expver variable, do the following on every 0601 file:
+# ncwa -O -a expver /g/data/rt52/era5t/single-levels/reanalysis/msdwlwrf/2023/msdwlwrf_era5t_oper_sfc_20230601-20230601.nc tmp/msdwlwrf_era5t_oper_sfc_20230601-20230601.nc
+# ncks -O --mk_rec_dmn time tmp/msdwlwrf_era5t_oper_sfc_20230601-20230601.nc tmp/msdwlwrf_era5t_oper_sfc_20230601-20230601.nc
+
+# for f in *.nc; do ncwa -O -d expver,0,0 -a expver $f $f; done
+# rm -r $base_out/$var/2023/tmp/
