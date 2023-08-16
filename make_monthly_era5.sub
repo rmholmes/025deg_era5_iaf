@@ -24,10 +24,12 @@ for f in $base_in/$var/2023/${var}_era5t_oper_sfc_2023*.nc; do
     echo $f
     ncks -O --mk_rec_dmn time $f $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_${f: -20}
 done
-ncrcat -O $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_202304*.nc $base_out/$var/2023/${var}_era5t_oper_sfc_20230401-20230430.nc
-ncrcat -O $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_202305*.nc $base_out/$var/2023/${var}_era5t_oper_sfc_20230501-20230531.nc
-ncrcat -O $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_202306*.nc $base_out/$var/2023/${var}_era5t_oper_sfc_20230601-20230630.nc
-ncrcat -O $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_202307*.nc $base_out/$var/2023/${var}_era5t_oper_sfc_20230701-20230731.nc
+
+# Concatenate with xarray to take into account netcdf packing!!!
+# ncrcat -O $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_202304*.nc $base_out/$var/2023/${var}_era5t_oper_sfc_20230401-20230430.nc
+# ncrcat -O $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_202305*.nc $base_out/$var/2023/${var}_era5t_oper_sfc_20230501-20230531.nc
+# ncrcat -O $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_202306*.nc $base_out/$var/2023/${var}_era5t_oper_sfc_20230601-20230630.nc
+# ncrcat -O $base_out/$var/2023/tmp/${var}_era5t_oper_sfc_202307*.nc $base_out/$var/2023/${var}_era5t_oper_sfc_20230701-20230731.nc
 
 # To deal with expver variable, do the following on every 0601 file:
 # ncwa -O -a expver /g/data/rt52/era5t/single-levels/reanalysis/msdwlwrf/2023/msdwlwrf_era5t_oper_sfc_20230601-20230601.nc tmp/msdwlwrf_era5t_oper_sfc_20230601-20230601.nc
