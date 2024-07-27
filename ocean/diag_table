@@ -120,7 +120,7 @@ ACCESS-OM2
 # Table H1: zostoga
 #
 # Rosetta stone: temp=sea_water_potential_temperature
- "ocean_model","pot_temp","pot_temp" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","pot_temp","pot_temp" ,"ocean_month","all",.true.,"none",2
 # Table H1: thetao
 #
 # conservative temperature 3d tracer 
@@ -145,7 +145,7 @@ ACCESS-OM2
  "ocean_model","squared_surface_pot_temp","sst_sq"  ,"ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: sst_sq=square_of_sea_surface_temperature (daily) - potential temperature!
- "ocean_model","squared_surface_pot_temp","sst_sq"  ,"ocean_daily","all",.true.,"none",2
+# "ocean_model","squared_surface_pot_temp","sst_sq"  ,"ocean_daily","all",.true.,"none",2
 # Table H1: tos*
 #
 # Bottom temperature - potential temperature!
@@ -176,7 +176,7 @@ ACCESS-OM2
 # Rosetta stone: surface_salt=sea_surface_salinity
  "ocean_model","surface_salt","sss" ,"ocean_month","all",.true.,"none",2
  "ocean_model","surface_salt","sss"  ,"ocean_daily","all",.true.,"none",2
- "ocean_model","squared_surface_salt","sss_sq"  ,"ocean_daily","all",.true.,"none",2
+# "ocean_model","squared_surface_salt","sss_sq"  ,"ocean_daily","all",.true.,"none",2
  "ocean_model","squared_surface_salt","sss_sq"  ,"ocean_month","all",.true.,"none",2
 # Table H1: sos*
 #
@@ -208,8 +208,8 @@ ACCESS-OM2
 # Table H1: mlotstsq
 # 
 # Rosetta stone: psiu=ocean_barotropic_mass_streamfunction
- "ocean_model","psiu","psiu" ,"ocean_month","all",.true.,"none",2
- "ocean_model","psiv","psiv","ocean_month","all",.true.,"none",2
+# "ocean_model","psiu","psiu" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","psiv","psiv","ocean_month","all",.true.,"none",2
 # Table H1: msftbarot
 
 # 
@@ -223,7 +223,7 @@ ACCESS-OM2
 "ocean_model","pe_tot","pe_tot"                                ,"ocean_scalar","all",.true.,"none",2
 
 # Rosetta stone: hblt=ocean_mixed_layer_thickness_defined_by_mixing_scheme (daily max)
- "ocean_model","hblt","hblt_max" ,"ocean_daily","all",  "max" ,"none",2
+# "ocean_model","hblt","hblt_max" ,"ocean_daily","all",  "max" ,"none",2
 
 # Rosetta stone: hblt=ocean_mixed_layer_thickness_defined_by_mixing_scheme (monthly max)
  "ocean_model","hblt","hblt_max" ,"ocean_month","all",   "max","none",2
@@ -257,25 +257,25 @@ ACCESS-OM2
  "ocean_model","ty_trans","ty_trans" ,"ocean_month","all",.true.,"none",2
 
 # Rosetta stone: tz_trans=upward_ocean_mass_transport
- "ocean_model","tz_trans","tz_trans" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","tz_trans","tz_trans" ,"ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: ocean_meridional_overturning_mass_streamfunction
 #                ocean_y_overturning_mass_streamfunction
 #                ocean_meridional_overturning_mass_streamfunction_due_to_bolus_advection
 #                ocean_y_overturning_mass_streamfunction_due_to_bolus_advection
 # are derived from the following fields 
- "ocean_model","tx_trans_gm","tx_trans_gm"           ,"ocean_month","all",.true.,"none",2
- "ocean_model","ty_trans_gm","ty_trans_gm"           ,"ocean_month","all",.true.,"none",2
- "ocean_model","tx_trans_submeso","tx_trans_submeso" ,"ocean_month","all",.true.,"none",2
- "ocean_model","ty_trans_submeso","ty_trans_submeso" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","tx_trans_gm","tx_trans_gm"           ,"ocean_month","all",.true.,"none",2
+# "ocean_model","ty_trans_gm","ty_trans_gm"           ,"ocean_month","all",.true.,"none",2
+# "ocean_model","tx_trans_submeso","tx_trans_submeso" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","ty_trans_submeso","ty_trans_submeso" ,"ocean_month","all",.true.,"none",2
 # Table I1: umo, vmo, wmo
 # XXX: gm and submeso contributions to wmo are missing!!
 
- "ocean_model","tx_trans_rho","tx_trans_rho"         ,"ocean_month","all",.true.,"none",2
+# "ocean_model","tx_trans_rho","tx_trans_rho"         ,"ocean_month","all",.true.,"none",2
  "ocean_model","ty_trans_rho","ty_trans_rho"         ,"ocean_month","all",.true.,"none",2
- "ocean_model","tx_trans_rho_gm","tx_trans_rho_gm"   ,"ocean_month","all",.true.,"none",2
+# "ocean_model","tx_trans_rho_gm","tx_trans_rho_gm"   ,"ocean_month","all",.true.,"none",2
  "ocean_model","ty_trans_rho_gm","ty_trans_rho_gm"   ,"ocean_month","all",.true.,"none",2
- "ocean_model", "tx_trans_nrho_submeso", "tx_trans_nrho_submeso", "ocean_month", "all", .true., "none", 2
+# "ocean_model", "tx_trans_nrho_submeso", "tx_trans_nrho_submeso", "ocean_month", "all", .true., "none", 2
  "ocean_model", "ty_trans_nrho_submeso", "ty_trans_nrho_submeso", "ocean_month", "all", .true., "none", 2
 
  "ocean_model","tx_trans_int_z","tx_trans_int_z"     ,"ocean_month","all",.true.,"none",2
@@ -484,7 +484,7 @@ ACCESS-OM2
 # RMH: The above close the heat budget.
 
 # RMH: Included for completeness
- "ocean_model","temp_vdiffuse_diff_cbt_conv","temp_vdiffuse_diff_cbt_conv"    ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","temp_vdiffuse_diff_cbt_conv","temp_vdiffuse_diff_cbt_conv"    ,"ocean_budget","all",.true.,"none",2
  "ocean_model","temp_rhodzt","temp_rhodzt"         ,"ocean_budget","all",.true.,"none",2
 
 # Snapshots to close budgets offline:
@@ -511,7 +511,7 @@ ACCESS-OM2
 # RMH: The above close the salt budget.
 
 # RMH: Included for completeness
- "ocean_model","salt_vdiffuse_diff_cbt_conv","salt_vdiffuse_diff_cbt_conv"      ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","salt_vdiffuse_diff_cbt_conv","salt_vdiffuse_diff_cbt_conv"      ,"ocean_budget","all",.true.,"none",2
  "ocean_model","salt_rhodzt","salt_rhodzt"         ,"ocean_budget","all",.true.,"none",2
 
 #==========================================================================
@@ -527,7 +527,7 @@ ACCESS-OM2
 # Table H1: difvho
 # 
 # Rosetta stone: diff_cbt_s=ocean_vertical_salt_diffusivity
-"ocean_model","diff_cbt_s","diff_cbt_s" ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","diff_cbt_s","diff_cbt_s" ,"ocean_budget","all",.true.,"none",2
 # Table H1: difvso
 #
 # XXX: Missing tendency of ocean potential energy content.
@@ -538,10 +538,10 @@ ACCESS-OM2
 #==========================================================================
 #
 # Rosetta stone: aredi=ocean_tracer_epineutral_laplacian_diffusivity
- "ocean_model","aredi","aredi" ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","aredi","aredi" ,"ocean_budget","all",.true.,"none",2
 #
 # Rosetta stone: agm=ocean_tracer_bolus_laplacian_diffusivity
- "ocean_model","agm","agm" ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","agm","agm" ,"ocean_budget","all",.true.,"none",2
 #
 # Rosetta stone: ocean_tracer_bolus_biharmonic_diffusivity = 0.0
 #
@@ -552,20 +552,20 @@ ACCESS-OM2
 # Rosetta stone: ocean_tracer_xy_biharmonic_diffusivity = 0.0
 #
 # Rosetta stone: gm_eddy_ke_source=tendency_of_ocean_eddy_kinetic_energy_content_due_to_bolus_transport
- "ocean_model","gm_eddy_ke_source","gm_eddy_ke_source" ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","gm_eddy_ke_source","gm_eddy_ke_source" ,"ocean_budget","all",.true.,"none",2
 #
 # Rosetta stone: aiso_lap=ocean_momentum_xy_laplacian_diffusivity
 # "ocean_model","aiso_lap","aiso_lap" ,"ocean_budget","all",.true.,"none",2
 # RMH: ACCESS-OM2 uses biharmonic friction
 # 
 # Rosetta stone: aiso_bih=ocean_momentum_xy_biharmonic_diffusivity
- "ocean_model","aiso_bih","aiso_bih" ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","aiso_bih","aiso_bih" ,"ocean_budget","all",.true.,"none",2
 #
 # Rosetta stone: ocean_kinetic_energy_dissipation_per_unit_area_due_to_xy_friction is
 # diagnosed from the sum of the following two fields 
 # "ocean_model","horz_lap_diss","horz_lap_diss" ,"ocean_budget",all,.true.,"none",2
 # RMH: ACCESS-OM2 uses biharmonic friction
- "ocean_model","horz_bih_diss","horz_bih_diss" ,"ocean_budget",all,.true.,"none",2
+# "ocean_model","horz_bih_diss","horz_bih_diss" ,"ocean_budget",all,.true.,"none",2
 #
 
 # #==========================================================================
@@ -577,7 +577,7 @@ ACCESS-OM2
  "ocean_model","bmf_v","bmf_v"                      ,"ocean_month","all",.true.,"none",2
 
 # Monthly squared velocity fields:
- "ocean_model", "vert_pv", "vert_pv", "ocean_month", "all", .true., "none", 2
+# "ocean_model", "vert_pv", "vert_pv", "ocean_month", "all", .true., "none", 2
  "ocean_model", "u", "usq", "ocean_month", "all", "pow02", "none", 2
  "ocean_model", "v", "vsq", "ocean_month", "all", "pow02", "none", 2
 
@@ -588,7 +588,7 @@ ACCESS-OM2
  "ocean_model", "mld","mld_min" ,"ocean_daily","all", min ,"none",2
 # Below does not exist in MOM
 # "ocean_model", "bottom_pot_temp", "bottom_pot_temp", "ocean_daily", "all", .true., "none", 2
- "ocean_model", "bottom_temp", "bottom_temp", "ocean_daily", "all", .true., "none", 2
+# "ocean_model", "bottom_temp", "bottom_temp", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "usurf", "usurf", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "vsurf", "vsurf", "ocean_daily", "all", .true., "none", 2
 
@@ -637,13 +637,13 @@ ACCESS-OM2
 # #==========================================================================
 
 # monthly
-"ocean_model", "bih_fric_u", "bih_fric_u", "ocean_month", "all", "average", "none", 2
-"ocean_model", "bih_fric_v", "bih_fric_v", "ocean_month", "all", "average", "none", 2
-"ocean_model", "u_dot_grad_vert_pv", "u_dot_grad_vert_pv", "ocean_month", "all", "average", "none", 2
-"ocean_model", "ekman_we","ekman_we","ocean_month","all",.true.,"none",2
-"ocean_model", "eta_nonbouss","eta_nonbouss","ocean_month","all",.true.,"none",2
-"ocean_model", "surface_pot_temp", "surface_pot_temp_max", "ocean_month", "all", "max", "none", 2
-"ocean_model", "surface_pot_temp", "surface_pot_temp_min", "ocean_month", "all", "min", "none", 2
+#"ocean_model", "bih_fric_u", "bih_fric_u", "ocean_month", "all", "average", "none", 2
+#"ocean_model", "bih_fric_v", "bih_fric_v", "ocean_month", "all", "average", "none", 2
+#"ocean_model", "u_dot_grad_vert_pv", "u_dot_grad_vert_pv", "ocean_month", "all", "average", "none", 2
+#"ocean_model", "ekman_we","ekman_we","ocean_month","all",.true.,"none",2
+#"ocean_model", "eta_nonbouss","eta_nonbouss","ocean_month","all",.true.,"none",2
+#"ocean_model", "surface_pot_temp", "surface_pot_temp_max", "ocean_month", "all", "max", "none", 2
+#"ocean_model", "surface_pot_temp", "surface_pot_temp_min", "ocean_month", "all", "min", "none", 2
 
 # daily
 "ocean_model", "frazil_3d_int_z", "frazil_3d_int_z", "ocean_daily", "all", "average", "none", 2
@@ -652,12 +652,12 @@ ACCESS-OM2
 "ocean_model", "sfc_hflux_from_runoff", "sfc_hflux_from_runoff", "ocean_daily", "all", "average", "none", 2
 "ocean_model", "sfc_hflux_pme", "sfc_hflux_pme", "ocean_daily", "all", "average", "none", 2
 
-"ocean_model", "surface_pot_temp", "surface_pot_temp_max", "ocean_daily", "all", "max", "none", 2
-"ocean_model", "surface_pot_temp", "surface_pot_temp_min", "ocean_daily", "all", "min", "none", 2
+#"ocean_model", "surface_pot_temp", "surface_pot_temp_max", "ocean_daily", "all", "max", "none", 2
+#"ocean_model", "surface_pot_temp", "surface_pot_temp_min", "ocean_daily", "all", "min", "none", 2
 # Below does not exist in MOM
 # "ocean_model", "bottom_pot_temp", "bottom_pot_temp_max", "ocean_daily", "all", "max", "none", 2
-"ocean_model", "bottom_temp", "bottom_temp_max", "ocean_daily", "all", "max", "none", 2
-"ocean_model", "sea_level", "sea_level_max", "ocean_daily", "all", "max", "none", 2
+#"ocean_model", "bottom_temp", "bottom_temp_max", "ocean_daily", "all", "max", "none", 2
+#"ocean_model", "sea_level", "sea_level_max", "ocean_daily", "all", "max", "none", 2
 
 
 # #==========================================================================
