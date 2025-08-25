@@ -1,0 +1,153 @@
+{
+  "description": "ERA5 forcing",
+  "forcing_product_name": "ERA5",
+  "inputs": [
+    {
+        "coupling_field_name": "swfld_ai",
+        "realm": "atmosphere",
+        "input_fields": [
+            {
+                "filename": "INPUT/{{year}}/msdwswrf_era5_oper_sfc_{{year}}{{month}}{{start_day}}-{{year}}{{month}}{{end_day}}.nc",
+                "fieldname": "msdwswrf",
+                "units": "W m**-2"
+            }
+        ]
+    },
+    {
+        "coupling_field_name": "lwfld_ai",
+        "realm": "atmosphere",
+        "input_fields": [
+            {
+                "filename": "INPUT/{{year}}/msdwlwrf_era5_oper_sfc_{{year}}{{month}}{{start_day}}-{{year}}{{month}}{{end_day}}.nc",
+                "fieldname": "msdwlwrf",
+                "units": "W m**-2"
+            }
+        ]
+    },
+    {
+        "coupling_field_name": "rain_ai",
+        "realm": "atmosphere",
+        "input_fields": [
+            {
+                "filename": "INPUT/{{year}}/crr_era5_oper_sfc_{{year}}{{month}}{{start_day}}-{{year}}{{month}}{{end_day}}.nc",
+                "fieldname": "crr",
+                "units": "kg m**-2 s**-1"
+            },
+            {
+                "filename": "INPUT/{{year}}/lsrr_era5_oper_sfc_{{year}}{{month}}{{start_day}}-{{year}}{{month}}{{end_day}}.nc",
+                "fieldname": "lsrr",
+                "units": "kg m**-2 s**-1"
+            }
+        ]
+    },
+    {
+        "coupling_field_name": "snow_ai",
+        "realm": "atmosphere",
+        "input_fields": [
+            {
+                "filename": "INPUT/{{year}}/msr_era5_oper_sfc_{{year}}{{month}}{{start_day}}-{{year}}{{month}}{{end_day}}.nc",
+                "fieldname": "msr",
+                "units": "kg m**-2 s**-1"
+            }
+        ]
+    },
+    {
+        "coupling_field_name": "press_ai",
+        "realm": "atmosphere",
+        "input_fields": [
+            {
+                "filename": "INPUT/{{year}}/msl_era5_oper_sfc_{{year}}{{month}}{{start_day}}-{{year}}{{month}}{{end_day}}.nc",
+                "fieldname": "msl",
+                "units": "Pa"
+            }
+        ]
+    },
+    {
+        "coupling_field_name": "runof_ai",
+        "realm": "land",
+        "input_fields": [
+            {
+                "filename": "INPUT/friver_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-5-0-1_gr_{{year}}0101-{{year}}1231.nc",
+                "fieldname": "friver"
+            }
+        ]
+    },
+    {
+        "coupling_field_name": "tair_ai",
+        "realm": "atmosphere",
+        "input_fields": [
+            {
+                "filename": "INPUT/{{year}}/2t_era5_oper_sfc_{{year}}{{month}}{{start_day}}-{{year}}{{month}}{{end_day}}.nc",
+                "fieldname": "t2m",
+                "units": "K"
+            }
+        ]
+    },
+    {
+        "coupling_field_name": "qair_ai",
+        "realm": "atmosphere",
+        "input_fields": [
+            {
+                "filename": "INPUT/{{year}}/2d_era5_oper_sfc_{{year}}{{month}}{{start_day}}-{{year}}{{month}}{{end_day}}.nc",
+                "fieldname": "d2m",
+                "units": "K"
+            },
+            {
+                "filename": "INPUT/{{year}}/sp_era5_oper_sfc_{{year}}{{month}}{{start_day}}-{{year}}{{month}}{{end_day}}.nc",
+                "fieldname": "sp",
+                "units": "Pa"
+            }
+        ]
+    },
+    {
+        "coupling_field_name": "uwnd_ai",
+        "realm": "atmosphere",
+        "input_fields": [
+            {
+                "filename": "INPUT/{{year}}/10u_era5_oper_sfc_{{year}}{{month}}{{start_day}}-{{year}}{{month}}{{end_day}}.nc",
+                "fieldname": "u10",
+                "units": "m s**-1",
+                "perturbations": [
+                    {
+                        "type": "scaling",
+                        "dimension": "spatiotemporal",
+                        "value": "INPUT/10u_era5_oper_sfc_scaling.nc",
+                        "calendar": "forcing",
+                        "comment": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "coupling_field_name": "vwnd_ai",
+        "realm": "atmosphere",
+        "input_fields": [
+            {
+                "filename": "INPUT/{{year}}/10v_era5_oper_sfc_{{year}}{{month}}{{start_day}}-{{year}}{{month}}{{end_day}}.nc",
+                "fieldname": "v10",
+                "units": "m s**-1",
+                "perturbations": [
+                    {
+                        "type": "scaling",
+                        "dimension": "spatiotemporal",
+                        "value": "INPUT/10v_era5_oper_sfc_scaling.nc",
+                        "calendar": "forcing",
+                        "comment": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "coupling_field_name": "licalvf_ai",
+        "realm": "land",
+        "input_fields": [
+            {
+                "filename": "INPUT/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-5-0-1_gr_{{year}}0101-{{year}}1231.nc",
+                "fieldname": "licalvf"
+            }
+        ]
+    }
+  ]
+}
